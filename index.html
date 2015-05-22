@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>¿Qué modulos me instalo? - DrupalCamp Spain 2015 - Carlos Reig</title>
+
+		<meta name="description" content="Presentación de la charla dada en la DrupalCamp Spain del 2015 acerca de los módulos utilizados más frecuentemente en las instalaciones de Drupal 7">
+		<meta name="author" content="Carlos Reig">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="img/background.png">
+					<h1>¿Qué modulos me instalo?</h1>
+					<h3>Un paseo por drupal.org/project</h3>
+					<p>
+						<small>Created by <a href="http://www.carlosreig.es">Carlos Reig Matut</a> / <a href="http://twitter.com/unstatu">@unstatu</a></small>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>¿Qué vamos a hacer?</h2>
+					<p>
+						<ul>
+							<li>SEO</li>
+							<li>Funcionalidades</li>
+							<li>Interfaz</li>
+							<li>Rendimiento</li>
+							<li>etc.</li>
+						</ul>
+					</p>
+					<aside class="notes">El primer día... Explicar qué es un módulo</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>¿Quién soy?</h2>
+
+					<ul style="list-style: none; text-align: right; margin-top: 50px;">
+						<li>Carlos Reig Matut</li>
+						<li>Ingeniero informático por la UV</li>
+						<li>Freelance web developer</li>
+						<li><a href="http://www.twitter.com/unstatu">@unstatu</a></li>
+					</ul>
+					<img style="float:right; margin-left: 30px" src="img/fotoPresentacion.jpg">
+
+					<ul style="list-style: none; float: left; margin-top: 100px;">
+						<li><img style="margin: 0; border: 0" src="img/logoAED.png"></li>
+						<li><a href="http://asociaciondrupal.es/">http://asociaciondrupal.es/</a></li>
+					</ul>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Antes de empezar...</h2>
+					<aside class="notes">Drupal 7</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Drush</h2>
+					<p>
+						Instalación<br />
+						<pre><code>composer global require drush/drush:7.*</code></pre>
+					</p>
+					<p>
+						Uso<br />
+						<pre><code>drush en module_name</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Manos a la obra</h2>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Views</h2>
+					<p>
+						 Proporciona la posibilidad de hacer "listas"
+					</p>
+					<p>
+						Instalación<br/>
+						<pre><code>drush en views</code></pre>
+						<pre><code>drush en views_ui</code></pre>
+
+						Uso<br/>
+						<pre><code>Structure/Views</code></pre>
+					</p>
+					<aside class="notes">https://www.drupal.org/project/project_module</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Context</h2>
+					<p>
+						Permite realizar acciones para determinados contextos
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en context</code></pre>
+					<pre><code>drush en context_ui</code></pre>
+
+					Uso<br/>
+					<pre><code>Structure/Context</code></pre>
+					</p>
+					<aside class="notes">http://192.168.56.101/dc2015/landing/first-page</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>WYSIWYG</h2>
+					<p>
+						Permite al usuario introducir información de forma amigable
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en wysiwyg
+Descargar librería JS en sites/all/libraries</code></pre>
+
+					Configuración<br/>
+					<pre><code>Configuration/Content/WYSIWYG</code></pre>
+					</p>
+					<aside class="notes">http://ftp.drupal.org/files/projects/wysiwyg-7.x-2.x-dev.tar.gz. http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.7/ckeditor_4.4.7_full.zip Se pueden configurar las opciones para cada text format</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>IMCE WYSIWYG</h2>
+					<p>
+						Permite subir las imágenes al servidor desde WYSIWYG
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en imce_wysiwyg
+Añadir los botones de Image y IMCE en el perfil deseado de WYSIWYG</code></pre>
+					</p>
+					<aside class="notes">Se pueden configurar las opciones para cada text format</aside>
+				</section>
+
+
+				<section data-background="img/background.png">
+					<h2>Media</h2>
+					<p>
+						Permite gestionar la librería multimedia
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en media
+Añadir el filtro de Media a los text format deseados
+Añadir Media browser en el perfil de WYIWYG</code></pre>
+					</p>
+					<aside class="notes">Se pueden configurar las opciones para cada text format</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>jQuery Update</h2>
+					<p>
+						Permite gestionar la versión de la librería jQuery
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en jquery_update</code></pre>
+					Uso
+					<pre><code>Configuration/Development/jQuery Update</code></pre>
+					</p>
+					<aside class="notes">Drupal 7 trae por defecto la versión 1.4 y se puede actualizar hasta la 2.1. Mantiene independencia entre los themes</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Webform</h2>
+					<p>
+						Permite crear formularios de forma muy sencilla
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en webform</code></pre>
+					Uso
+					<pre><code>Creando un nodo de tipo Webform</code></pre></p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Admin Menu</h2>
+					<p>
+						Menu para acceder a cualquier parte de la administración
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en admin_menu
+drush dis toolbar
+drush dis overlay #opcional</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+				<h2>Module filter</h2>
+				<p>
+					Permite manejar los módulos de forma (mucho) más amigable
+				</p>
+				<p>
+					Instalación<br/>
+					<pre><code>drush en module_filter</code></pre>
+				</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Admin views</h2>
+					<p>
+						Sustituye las listas de la parte de administración por <em>views</em>
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en admin_views
+drush cc all</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Fast Permissions Administration</h2>
+					<p>
+						Permite manejar los permisos de forma (mucho) más amigable
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en fpa</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Coffee</h2>
+					<p>
+						Permite acceder a cualquier path de administración con un buscador
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en coffee</code></pre>
+					Uso
+					<pre><code>Apretando Alt + d</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>i18n</h2>
+					<p>
+						Permite tener webs multi-idiomas
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en i18n
+drush en title</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Date</h2>
+					<p>
+						Añade el field Date
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en date</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Pathauto</h2>
+					<p>
+						Genera automáticamente URLs amigables
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en pathauto</code></pre>
+					Configuración
+					<pre><code>Configuration/Search and metadata/URL aliases</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Metatag</h2>
+					<p>
+						Permite gestionar los metatags de cada página
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en metatag</code></pre>
+					Uso
+					<pre><code>En la zona de configuracion del contenido</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>XMLSitemap</h2>
+					<p>
+						Genera el archivo sitemap.xml
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en xmlsitemap
+drush en xmlsitemap_node</code></pre>
+					Uso
+					<pre><code>En la zona de configuracion del contenido</code></pre>
+					</p>
+					<aside class="notes">Se genera cada vez que se ejecuta el cron</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Global Redirect</h2>
+					<p>
+						Redirecciona con 301 los "contenidos duplicados"
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en globalredirect</code></pre>
+					Uso
+					<pre><code>En la zona de configuracion del contenido</code></pre>
+					</p>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Redirect</h2>
+					<p>
+						Permite manejar las redirecciones 301 manualmente
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en redirect</code></pre>
+					Uso
+					<pre><code>Configuration/Search and metadata</code></pre>
+					</p>
+					<aside class="notes">Fix 404 pages. Si un alias cambia, se añade un redirect del viejo al nuevo</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Bean</h2>
+					<p>
+						Permite tratar a los bloques como tipos de contenido
+					</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en bean
+drush en bean_admin_ui</code></pre>
+					Uso
+					<pre><code>Structure/Block types
+Content/Add block</code></pre>
+					</p>
+					<aside class="notes">Ejemplo de un bloque banner</aside>
+				</section>
+
+<!--				<section data-background="img/background.png">
+					<h2>Entity cache + memcache</h2>
+					<p>Mejora el sistema de caché</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en memcache
+drush en entitycache</code></pre>
+					</p>
+					<aside class="notes">Hay que instalar la librería de memcache de PHP</aside>
+				</section>-->
+
+				<section data-background="img/background.png">
+					<h2>EU Cookie Compliance</h2>
+					<p>Añade el mensaje informando sobre la política de cookies</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush en eu_cookie_compliance</code></pre>
+
+					Configuración
+					<pre><code>Configuration/System/EU Cookie Compliance</code></pre>
+					</p>
+					<aside class="notes">Acordarse de cambiar los permisos para ver el mensaje</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<h2>Google Analytics</h2>
+					<p>Permite gestionar los códigos de Google Analytics</p>
+					<p>
+						Instalación<br/>
+					<pre><code>drush dl google_analytics
+drush en googleanalytics</code></pre>
+
+					Configuración
+					<pre><code>Configuration/System/Google Analytics</code></pre>
+					</p>
+					<aside class="notes">Acordarse de cambiar los permisos para ver el mensaje</aside>
+				</section>
+
+				<section data-background="img/background.png">
+					<img src="img/esoEsTodoAmigos.jpg" />
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
