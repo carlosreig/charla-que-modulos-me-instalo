@@ -59,7 +59,7 @@
 							<li>etc.</li>
 						</ul>
 					</p>
-					<aside class="notes">El primer día... Explicar qué es un módulo. 24 módulos. Drupal 7</aside>
+					<aside class="notes">El primer día... Explicar qué es un módulo. 24 módulos. Drupal 7. Unos 30.500 módulos</aside>
 				</section>
 
 				<section data-background="img/background.png">
@@ -81,14 +81,16 @@
 
 				<section data-background="img/background.png">
 					<h2>Antes de empezar...</h2>
-					<aside class="notes"></aside>
+					<aside class="notes">Vamos a ir rápido. Las diapositivas son solo para referencia. HAbrá algo de lío. Interrupciones. </aside>
 				</section>
 
 				<section data-background="img/background.png">
 					<h2>Drush</h2>
 					<p>
 						Instalación<br />
-						<pre><code>composer global require drush/drush:7.*</code></pre>
+						<pre><code>composer global require drush/drush:7.*
+export PATH="$HOME/.composer/vendor/bin:$PATH" #añadir esta línea al final del archivo ~/.bashrc
+                </code></pre>
 					</p>
 					<p>
 						Uso<br />
@@ -152,10 +154,10 @@
                     <p>
                         Instalación<br/>
 					<pre><code>drush en bean
-                        drush en bean_admin_ui</code></pre>
+drush en bean_admin_ui</code></pre>
                     Uso
 					<pre><code>Structure/Block types
-                        Content/Add block</code></pre>
+Content/Add block</code></pre>
                     </p>
                     <aside class="notes">Ejemplo de un bloque banner</aside>
                 </section>
@@ -168,7 +170,7 @@
                     <p>
                         Instalación<br/>
 					<pre><code>drush en i18n
-                        drush en title</code></pre>
+drush en title</code></pre>
                     </p>
                 </section>
 
@@ -205,8 +207,8 @@
                     <p>
                         Instalación<br/>
 					<pre><code>drush en admin_menu
-                        drush dis toolbar
-                        drush dis overlay #opcional</code></pre>
+drush dis toolbar
+drush dis overlay #opcional</code></pre>
                     </p>
                 </section>
 
@@ -229,7 +231,7 @@
                     <p>
                         Instalación<br/>
 					<pre><code>drush en admin_views
-                        drush cc all</code></pre>
+drush cc all</code></pre>
                     </p>
                 </section>
 
@@ -406,6 +408,28 @@ drush en googleanalytics</code></pre>
 					</p>
 					<aside class="notes">Acordarse de cambiar los permisos para ver el mensaje</aside>
 				</section>
+
+                <section data-background="img/background.png">
+                    <h2>Y muchos más</h2>
+                    <ul>
+                        <li>Transliteration</li>
+                        <li>Panels</li>
+                        <li>Entity Reference</li>
+                        <li>Features</li>
+                        <li>UUID</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+
+                <section data-background="img/background.png">
+                    <h2>Comentarios del público</h2>
+                    <ul>
+                        <li>Fences</li>
+                        <li>One-click upload (ocupload)</li>
+                        <li>Rules</li>
+                        <li>Background image (bg_image)</li>
+                    </ul>
+                </section>
 
 				<section data-background="img/background.png">
 					<img src="img/esoEsTodoAmigos.jpg" />
